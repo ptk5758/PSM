@@ -1,0 +1,16 @@
+body {
+    font-size: 16px;
+}
+
+#root {
+    height: 100%;
+}
+
+#root > .app {
+    display: flex;
+    height: 100%;
+}
+
+#root > .app > aside { display: flex; flex-direction: column;}
+#root > .app > aside > ul { min-height: 0; overflow: auto; }
+#root > .app > main { flex: 1; background-color: #eee; height: 100%; }

@@ -1,0 +1,56 @@
+function SideBar() {
+    return (
+        <aside>
+            <div>sadf</div>
+            <ul>
+                <li>sadasd</li>
+                <li>sadasasdd</li>
+                <li>sadasasdd</li>
+                <li>sadasasdd</li>
+                <li>sadasasdd</li>
+                <li>sadasasdd</li>
+                <li>sadasasdd</li>
+                <li>sadasasdd</li>
+                <li>sadasasdd</li>
+                <li>sadasasdd</li>
+                <li>sadasasdd</li>
+                <li>sadasasdd</li>
+                <li>sadasasdd</li>
+                <li>sadasasdd</li>
+                <li>sadasasdd</li>
+                <li>sadasasdd</li>
+                <li>sadasasdd</li>
+                <li>sadasasdd</li>
+                <li>sadasasdd</li>
+                <li>sadasasdd</li>
+                <li>sadasasdd</li>
+                <li>sadasasdd</li>
+                <li>sadasasdd</li>
+                <li>sadasasdd</li>
+                <li>sadasasdd</li>
+                <li>sadasasdd</li>
+                <li>sadasasdd</li>
+                <li>sadasasdd</li>
+                <li>sadasasdd</li>
+                <li>sadasasdd</li>
+                <li>sadasasdd</li>
+                <li>sadasasdd</li>
+                <li>sadasasdd</li>
+                <li>sadasasdd</li>
+                <li>sadasasdd</li>
+                <li>sadasasdd</li>
+                <li>sadasasdd</li>
+                <li>sadasasdd</li>
+                <li>sadasasdd</li>
+                <li>sadasasdd</li>
+                <li>sadasasdd</li>
+                <li>sadasasdd</li>
+                <li>sadasasdd</li>
+                <li>sadasasdd</li>
+                <li>sadasasdd</li>
+                <li>sadasasdd</li>
+            </ul>
+        </aside>
+    )
+}
+export default SideBar
