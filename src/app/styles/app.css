@@ -1,5 +1,6 @@
 body {
     font-size: 16px;
+    background-color: var(--color-bg-page);
 }
 
 #root {
@@ -13,4 +14,4 @@ body {
 
 #root > .app > aside { display: flex; flex-direction: column;}
 #root > .app > aside > ul { min-height: 0; overflow: auto; }
-#root > .app > main { flex: 1; background-color: #eee; height: 100%; }
+#root > .app > main { flex: 1; height: 100%; }
