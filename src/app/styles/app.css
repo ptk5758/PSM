@@ -38,6 +38,7 @@ body {
     font-size: 16px;
     background-color: var(--color-bg-page);
     font-family: 'NanumGothic', 'Malgun Gothic';
+    color: var(--color-text-primary);
 }
 
 #root {
