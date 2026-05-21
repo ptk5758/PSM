@@ -1,6 +1,43 @@
+@font-face {
+  font-family: 'NanumGothic';
+  src: url('/fonts/NanumGothicLight.otf') format('opentype'),
+       url('/fonts/NanumGothicLight.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NanumGothic';
+  src: url('/fonts/NanumGothic.otf') format('opentype'),
+       url('/fonts/NanumGothic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NanumGothic';
+  src: url('/fonts/NanumGothicBold.otf') format('opentype'),
+       url('/fonts/NanumGothicBold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NanumGothic';
+  src: url('/fonts/NanumGothicExtraBold.otf') format('opentype'),
+       url('/fonts/NanumGothicExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
     font-size: 16px;
     background-color: var(--color-bg-page);
+    font-family: 'NanumGothic', 'Malgun Gothic';
 }
 
 #root {
@@ -15,3 +52,43 @@ body {
 #root > .app > aside { display: flex; flex-direction: column;}
 #root > .app > aside > ul { min-height: 0; overflow: auto; }
 #root > .app > main { flex: 1; height: 100%; }
+
+
+
+
+/* ============================== 태그 기본 스타일 ============================== */
+h1 {
+    font-weight: var(--font-weight-extrabold);
+}
+h2, h3 {
+    font-weight: var(--font-weight-bold);
+}
+h4, h5, h6 {
+    font-weight: var(--font-weight-bold);
+}
+
+
+
+/* ============================== 스크롤 바 ============================== */
+/* Scrollbar — WebKit (Chrome) */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-strong);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-tertiary);
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
