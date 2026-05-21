@@ -7,11 +7,10 @@
 .story_select > ul > li:global(.on) { box-shadow: inset 4px 0 0 0px var(--color-primary); }
 
 .story_select > ul > li > h4 {
-    margin-bottom: 6px;
     
     overflow: hidden;
     white-space: nowrap;  
     text-overflow: ellipsis;
 }
 
-.story_select > ul > li > p { font-size: 0.75em; color: var(--color-text-secondary); }
+.story_select > ul > li > p { font-size: 0.75em; color: var(--color-text-secondary); margin-top: 6px; }
