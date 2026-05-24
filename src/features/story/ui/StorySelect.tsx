@@ -2,7 +2,8 @@
 import clsx from 'clsx'
 import style from './StorySelect.module.css'
 import { StoryCard, type StoryCardItem } from '@/entities/story'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { useWorkspace } from '@/app/hooks'
 
 type StorySelectProps = {
     className?: string
@@ -41,25 +42,21 @@ const SAMPLE_DATA: StoryCardItem[] = [
     },
 ]
 function StorySelect({ className }: StorySelectProps) {
-
-    // TODO 전역 스토어
-    // 편집기 쪽으로 이동 시켜야함 선택한 상태를
-    const [selected, setSelected] = useState<string>()
-    const handleClick = (storyId: string) => setSelected(storyId)
-
+    const { storyId, setStoryId } = useWorkspace()
+    const handleClick = (storyId: string) => setStoryId(storyId)
     return (
         <div className={clsx(style.story_select, className)}>
             <span>빈 공간 입니다</span>
             <ul>
-                {SAMPLE_DATA.map(({ storyId, subject, description }) => {
+                {SAMPLE_DATA.map(({ storyId: id, subject, description }) => {
                     return (
                         <StoryCard
-                            key={storyId}
-                            storyId={storyId}
+                            key={id}
+                            storyId={id}
                             subject={subject}
                             description={description}
                             onClick={handleClick}
-                            isSelected={selected === storyId}
+                            isSelected={storyId === id}
                         />
                     )
                 })}

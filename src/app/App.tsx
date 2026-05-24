@@ -4,13 +4,16 @@ import { SideBar } from '../widgets/side-bar'
 import './styles/reset.css'
 import './styles/root.css'
 import './styles/app.css'
+import WorkspaceProvider from './providers/story/StoryProvider'
 
 function App() {
     return (
-        <div className="app">
-            <SideBar />
-            <MainBoard />
-        </div>
+        <WorkspaceProvider>
+            <div className="app">
+                <SideBar />
+                <MainBoard />
+            </div>
+        </WorkspaceProvider>
     )
 }
 
