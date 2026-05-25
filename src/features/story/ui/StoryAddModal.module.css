@@ -20,3 +20,10 @@
     display: flex;
     justify-content: flex-end;
 }
+
+.story_add_modal > form > div.action > span {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    color: var(--color-primary);
+}
