@@ -68,8 +68,153 @@ h4, h5, h6 {
     font-weight: var(--font-weight-bold);
 }
 
+/* ============================== Input ============================== */
+input[type="text"],
+input[type="password"],
+textarea {
+  width: 100%;
+  padding: 6px 2px;
 
+  background: transparent;
+  border: none;
+  border-bottom: 1.5px solid var(--color-border-strong);
+  border-radius: 0;
+  outline: none;
 
+  font-size: 14px;
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-primary);
+
+  caret-color: var(--color-primary);
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder,
+textarea::placeholder {
+  color: var(--color-text-tertiary);
+  font-weight: var(--font-weight-light);
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+  border-bottom-color: var(--color-primary);
+}
+
+input[type="text"]:disabled,
+input[type="password"]:disabled,
+textarea:disabled {
+  color: var(--color-text-tertiary);
+  border-bottom-color: var(--color-border-default);
+  cursor: not-allowed;
+}
+
+/* textarea 전용 */
+textarea {
+  resize: vertical;
+  line-height: 1.6;
+  min-height: 80px;
+  font-family: 'NanumGothic';
+}
+
+/* ============================== 버튼 ============================== */
+/* Button — Base */
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  padding: 8px 18px;
+  border-radius: 8px;
+  border: 1.5px solid transparent;
+  outline: none;
+  cursor: pointer;
+
+  font-size: 14px;
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+  white-space: nowrap;
+
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Button — Primary */
+.btn-primary {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-primary-on);
+}
+
+.btn-primary:hover {
+  background: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+}
+
+.btn-primary:active {
+  background: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+  opacity: 0.85;
+}
+
+/* Button — Secondary */
+.btn-secondary {
+  background: var(--color-bg-surface);
+  border-color: var(--color-border-strong);
+  color: var(--color-text-primary);
+}
+
+.btn-secondary:hover {
+  background: var(--color-bg-subtle);
+  border-color: var(--color-border-strong);
+}
+
+.btn-secondary:active {
+  background: var(--color-bg-subtle);
+  opacity: 0.85;
+}
+
+/* Button — Danger */
+.btn-danger {
+  background: var(--color-danger);
+  border-color: var(--color-danger);
+  color: var(--color-danger-on);
+}
+
+.btn-danger:hover {
+  background: var(--color-danger-hover);
+  border-color: var(--color-danger-hover);
+}
+
+.btn-danger:active {
+  background: var(--color-danger-hover);
+  border-color: var(--color-danger-hover);
+  opacity: 0.85;
+}
+
+/* Button — Ghost */
+.btn-ghost {
+  background: transparent;
+  border-color: transparent;
+  color: var(--color-text-secondary);
+  padding: 8px 10px;
+}
+
+.btn-ghost:hover {
+  background: var(--color-bg-subtle);
+  color: var(--color-text-primary);
+}
+
+.btn-ghost:active {
+  background: var(--color-bg-subtle);
+  opacity: 0.85;
+}
 /* ============================== 스크롤 바 ============================== */
 /* Scrollbar — WebKit (Chrome) */
 ::-webkit-scrollbar {
