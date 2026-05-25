@@ -1,6 +1,7 @@
 import { useActionState, useState } from 'react'
 import style from './StoryAddModal.module.css'
 import { Modal } from '@/shared/modal'
+import { addStory } from '../model/api'
 
 type StoryAddModalProps = {
     isOpen: boolean
@@ -10,9 +11,15 @@ type State = {
     message: string
 }
 async function formReducer(state: State, formData: FormData) {
-    const a = await new Promise((resolve, reject) => {
-        setTimeout(() => {resolve(true)}, 3000)
-    })
+    
+    const inputStoryName = formData.get("story_name")
+    if (typeof inputStoryName !== 'string') {
+        return { ...state, message: '스토리 명 을 입력 해주세요' }        
+    }
+    const t = formData.get("story_description")
+    const inputStoryDescription = typeof t === 'string' ? t : ''
+    
+    const response = await addStory({subject: inputStoryName, description: inputStoryDescription})
     return { ...state, message: '추가 완료' }
 }
 
@@ -31,17 +38,19 @@ function StoryAddModal({ isOpen, onClose }: StoryAddModalProps) {
         >
             <form action={action}>
                 <div className={style.item}>
-                    <label>스토리 명</label>
+                    <label htmlFor='story_name'>스토리 명</label>
                     <input
                         type="text"
+                        id="story_name"
                         name="story_name"
                         value={storyName}
                         onChange={(e) => setStoryName(e.target.value)}
                     />
                 </div>
                 <div className={style.item}>
-                    <label>설명</label>
+                    <label htmlFor='story_description'>설명</label>
                     <textarea
+                        id="story_description"
                         name="story_description"
                         onChange={(e) => setStoryDescription(e.target.value)}
                         value={storyDescription}
