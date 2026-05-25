@@ -1,0 +1,22 @@
+.story_add_modal {}
+
+.story_add_modal > form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+}
+
+.story_add_modal > form > div.item {
+    display: flex;
+    flex-direction: column;
+}
+
+.story_add_modal > form > div.item > label {
+    font-weight: var(--font-weight-bold);
+}
+
+.story_add_modal > form > div.action {
+    display: flex;
+    justify-content: flex-end;
+}

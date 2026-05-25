@@ -1,6 +1,6 @@
 import { Modal } from '@/shared/modal'
 import style from './SideBar.module.css'
-import { StorySelect } from '@/features/story'
+import { StoryAddModal, StorySelect } from '@/features/story'
 import { useState } from 'react'
 
 function SideBar() {
@@ -14,38 +14,7 @@ function SideBar() {
                 <p>스토리 목록</p>
                 <button onClick={handleStoryAdd}>새 스토리 추가</button>
             </div>
-            <Modal isOpen={isPopup} title="새 스토리 추가" width={'400px'} height={'280px'} onClose={handlePopupClose}>
-                <div>스토리 추가 양식</div>
-                <div>스토리 추가 양식</div>
-                <div>스토리 추가 양식</div>
-                <div>스토리 추가 양식</div>
-                <div>스토리 추가 양식</div>
-                <div>스토리 추가 양식</div>
-                <div>스토리 추가 양식</div>
-                <div>스토리 추가 양식</div>
-                <div>스토리 추가 양식</div>
-                <div>스토리 추가 양식</div>
-                <div>스토리 추가 양식</div>
-                <div>스토리 추가 양식</div>
-                <div>스토리 추가 양식</div>
-                <div>스토리 추가 양식</div>
-                <div>스토리 추가 양식</div>
-                <div>스토리 추가 양식</div>
-                <div>스토리 추가 양식</div>
-                <div>스토리 추가 양식</div>
-                <div>스토리 추가 양식</div>
-                <div>스토리 추가 양식</div>
-                <div>스토리 추가 양식</div>
-                <div>스토리 추가 양식</div>
-                <div>스토리 추가 양식</div>
-                <div>스토리 추가 양식</div>
-                <div>스토리 추가 양식</div>
-                <div>스토리 추가 양식</div>
-                <div>스토리 추가 양식</div>
-                <div>스토리 추가 양식</div>
-                <div>스토리 추가 양식</div>
-                <div>스토리 추가 양식</div>
-            </Modal>
+            <StoryAddModal isOpen={isPopup} onClose={handlePopupClose} />
             <StorySelect className={style.list} />
             {/* TODO : 스토리 리스트 */}
         </aside>

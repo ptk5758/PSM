@@ -8,9 +8,10 @@ type ModalProps = {
     onClose?: () => void
     width?: React.CSSProperties['width']
     height?: React.CSSProperties['height']
+    mainClassName?: string
 }
 
-function Modal({ isOpen, children, onClose, title, width, height }: PropsWithChildren<ModalProps>) {
+function Modal({ isOpen, children, onClose, title, width, height, mainClassName }: PropsWithChildren<ModalProps>) {
     return (
         isOpen &&
         createPortal(
@@ -30,7 +31,7 @@ function Modal({ isOpen, children, onClose, title, width, height }: PropsWithChi
                             <h2>{title}</h2>
                         </header>
                     )}
-                    <main>{children}</main>
+                    <main className={mainClassName}>{children}</main>
                 </div>
             </div>,
             document.body,
