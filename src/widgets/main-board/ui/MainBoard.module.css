@@ -18,4 +18,6 @@
     font-weight: var(--font-weight-bold);
 }
 .main_board > .character_list {
+    padding-top: 0.5rem;    
+    padding-bottom: 0.5rem;
 }
