@@ -11,15 +11,15 @@ type State = {
     message: string
 }
 async function formReducer(state: State, formData: FormData) {
-    
-    const inputStoryName = formData.get("story_name")
+    const inputStoryName = formData.get('story_name')
     if (typeof inputStoryName !== 'string') {
-        return { ...state, message: '스토리 명 을 입력 해주세요' }        
+        return { ...state, message: '스토리 명 을 입력 해주세요' }
     }
-    const t = formData.get("story_description")
+    const t = formData.get('story_description')
     const inputStoryDescription = typeof t === 'string' ? t : ''
-    
-    const response = await addStory({subject: inputStoryName, description: inputStoryDescription})
+
+    const response = await addStory({ subject: inputStoryName, description: inputStoryDescription })
+
     return { ...state, message: '추가 완료' }
 }
 
@@ -38,7 +38,7 @@ function StoryAddModal({ isOpen, onClose }: StoryAddModalProps) {
         >
             <form action={action}>
                 <div className={style.item}>
-                    <label htmlFor='story_name'>스토리 명</label>
+                    <label htmlFor="story_name">스토리 명</label>
                     <input
                         type="text"
                         id="story_name"
@@ -48,7 +48,7 @@ function StoryAddModal({ isOpen, onClose }: StoryAddModalProps) {
                     />
                 </div>
                 <div className={style.item}>
-                    <label htmlFor='story_description'>설명</label>
+                    <label htmlFor="story_description">설명</label>
                     <textarea
                         id="story_description"
                         name="story_description"

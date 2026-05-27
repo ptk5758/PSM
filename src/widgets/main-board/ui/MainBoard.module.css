@@ -1,0 +1,21 @@
+.main_board {
+}
+.main_board > * { padding: 0 1rem; }
+.main_board > .top {
+    border-bottom: 2px solid var(--color-border-default);
+    padding-top: 1rem;    
+    padding-bottom: 1rem;
+}
+
+.main_board > .top > h1 {
+    font-size: 1.5em;
+    font-weight: var(--font-weight-extrabold);
+    padding: 0.5em 0;
+}
+
+.main_board > .top > h2 {
+    font-size: 1.1em;
+    font-weight: var(--font-weight-bold);
+}
+.main_board > .character_list {
+}
