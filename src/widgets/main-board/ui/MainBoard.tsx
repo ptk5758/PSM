@@ -1,7 +1,6 @@
 import style from './MainBoard.module.css'
 import { useWorkspace } from '@/app/hooks'
 import { StoryHeader } from '@/entities/story'
-import { CharacterList } from '@/features/character'
 import clsx from 'clsx'
 
 function MainBoard() {
@@ -14,9 +13,6 @@ function MainBoard() {
     return (
         <main className={style.main_board}>
             <StoryHeader className={style.top} {...story} />
-            <CharacterList className={style.character_list} storyId={story.id} />
-            <div>StoryBoard</div>
-            <form>StoryForm</form>
         </main>
     )
 }
