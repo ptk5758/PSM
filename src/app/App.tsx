@@ -4,7 +4,7 @@ import { SideBar } from '../widgets/side-bar'
 import './styles/reset.css'
 import './styles/root.css'
 import './styles/app.css'
-import WorkspaceProvider from './providers/story/StoryProvider'
+import WorkspaceProvider from './providers/story/WorkspaceProvider'
 
 function App() {
     return (
