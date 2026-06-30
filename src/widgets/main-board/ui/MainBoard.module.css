@@ -1,13 +1,9 @@
 .main_board {
 }
-.main_board > * { padding: 0 1rem; }
+
 .main_board > .top {
     border-bottom: 2px solid var(--color-border-default);
-    padding-top: 1rem;    
+    padding-left: 1rem;
+    padding-top: 1rem;
     padding-bottom: 1rem;
-}
-
-.main_board > .character_list {
-    padding-top: 0.5rem;    
-    padding-bottom: 0.5rem;
 }
