@@ -14,9 +14,10 @@ import {
     type EdgeChange,
     type Connection,
     addEdge,
+    Panel,
 } from '@xyflow/react'
 import '@xyflow/react/dist/style.css'
-import { useCallback, useState } from 'react'
+import { useCallback, useState, type ChangeEvent } from 'react'
 
 const initNode: Node[] = [
     {
@@ -25,6 +26,7 @@ const initNode: Node[] = [
             foo: 'bar',
             label: 'node_1',
         },
+        type: 'textUpdater',
         position: { x: 0, y: 0 },
     },
     {
@@ -73,6 +75,24 @@ function MainBoard() {
         return <main className={clsx(style.main_board, 'no-item')}>시나리오를 선택 해주세요</main>
     }
 
+    const TextUpdaterNode = () => {
+        const onChange = useCallback((evt: ChangeEvent<HTMLInputElement, HTMLInputElement>) => {
+            console.log(evt.target.value)
+        }, [])
+
+        return (
+            <div className="text-updater-node">
+                <div>
+                    <label htmlFor="text">Text:</label>
+                    <input id="text" name="text" onChange={onChange} className="nodrag" />
+                </div>
+            </div>
+        )
+    }
+    const nodeTypes = {
+        textUpdater: TextUpdaterNode,
+    }
+
     return (
         <main className={style.main_board}>
             <StoryHeader className={style.top} {...story} />
@@ -80,12 +100,16 @@ function MainBoard() {
                 <ReactFlow
                     nodes={nodes}
                     edges={edges}
+                    nodeTypes={nodeTypes}
                     onNodesChange={onNodeChange}
                     onEdgesChange={onEdgeChange}
                     onConnect={onConnect}
                 >
                     <Background />
                     <Controls />
+                    <Panel position="bottom-right">
+                        <h1>Panel test</h1>
+                    </Panel>
                 </ReactFlow>
             </div>
         </main>
